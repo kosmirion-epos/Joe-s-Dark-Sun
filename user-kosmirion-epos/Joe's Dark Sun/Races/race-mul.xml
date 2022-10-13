@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Mul</name>
+		<update version="0.0.1">
+			<file name="race-mul.xml" url="https://raw.githubusercontent.com/kosmirion-epos/Kosmirion-Epos-Aurora-Content/master/user-kosmirion-epos/race-mul.xml" />
+		</update>
+	</info>
+	<element name="Mul" type="Race" source="Joe's Dark Sun" id="ID_RACE_MUL">
+		<description>
+			<h4>MUL TRAITS</h4>
+			<p>Your half-orc character has certain traits deriving from your orc ancestry.</p>
+			<p class="indent">
+				<strong>
+					<em>Ability Score Increase.</em>
+				</strong> Your Constitution score increases by 2, and your Strength increases by 1.
+			</p>
+			<p class="indent">
+				<strong>
+					<em>Age.</em>
+				</strong> Muls mature at the same rate as humans, and they reach adulthood in their late teens. On average, they live for 150 years.
+			</p>
+			<p class="indent">
+				<strong>
+					<em>Size.</em>
+				</strong> Muls are between 6-7 feet tall and weigh around 250 pounds. Your size is Medium.
+			</p>
+			<p class="indent">
+				<strong>
+					<em>Speed.</em>
+				</strong> Your base walking speed is 30 feet.
+			</p>
+			<!-- spacer -->
+			<p class="indent">
+				<strong>
+					<em>Acclimatised to Severity.</em>
+				</strong> You are naturally adapted to surviving in hot climates without apt resources. You require only half the amount of water on a daily basis to stay hydrated.
+			</p>
+			<p class="indent">
+				<strong>
+					<em>Dwarven Resilience.</em>
+				</strong> You have advantage on saving throws against poison, and you have resistance against poison damage.
+			</p>
+			<p class="indent">
+				<strong>
+					<em>Mul Vitality.</em>
+				</strong> During a short rest, whenever you roll hit dice to recover lost hit points, you may roll twice and take the higher result.
+			</p>
+			<p class="indent">
+				<strong>
+					<em>Relentless Endurance.</em>
+				</strong> When you are reduced to 0 hit points but not killed outright, you can drop to 1 hit point instead. You can’t use this feature again until you finish a long rest.
+			</p>
+			<p class="indent">
+				<strong>
+					<em>Inherent Ferocity.</em>
+				</strong> Muls are proficient in the Intimidation skill.
+			</p>
+			<p class="indent">
+				<strong>
+					<em>Languages.</em>
+				</strong> You can speak, read, and write Common and Dwarvish.
+			</p>
+		</description>
+		<sheet display="false" />
+		<setters>
+			<set name="height" modifier="2d10">6'7"</set>
+			<set name="weight" modifier="2d6">250 lb.</set>
+		</setters>
+		<rules>
+			<stat name="constitution" value="2" requirements="!ID_WOTC_WGTE_GRANTS_DARKMARKED,!ID_INTERNAL_GRANTS_DRAGONMARK,!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+			<stat name="strength" value="1" requirements="!ID_WOTC_WGTE_GRANTS_DARKMARKED,!ID_INTERNAL_GRANTS_DRAGONMARK,!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+			<select type="Ability Score Improvement" name="Custom Ability Score Improvement +2 (Mul)" supports="Custom Ability Score Increase 2" requirements="!ID_WOTC_WGTE_GRANTS_DARKMARKED,!ID_INTERNAL_GRANTS_DRAGONMARK,ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+			<select type="Ability Score Improvement" name="Custom Ability Score Improvement +1 (Mul)" supports="Custom Ability Score Increase 1" requirements="!ID_WOTC_WGTE_GRANTS_DARKMARKED,!ID_INTERNAL_GRANTS_DRAGONMARK,ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+			<stat name="innate speed" value="30" bonus="base"/>
+			<grant type="Size" id="ID_SIZE_MEDIUM" />
+			<grant type="Racial Trait" id="ID_RACIAL_TRAIT_ACCLIMISED_TO_SEVERITY" />
+			<grant type="Racial Trait" id="ID_RACIAL_TRAIT_DWARVEN_RESILIENCE" />
+			<grant type="Racial Trait" id="ID_RACIAL_TRAIT_MUL_VITALITY" />
+			<grant type="Racial Trait" id="ID_RACIAL_TRAIT_RELENTLESS_ENDURANCE" requirements="!ID_WOTC_WGTE_GRANTS_DARKMARKED,!ID_INTERNAL_GRANTS_DRAGONMARK"/>
+			<grant type="Racial Trait" id="ID_RACIAL_TRAIT_INHERENT_FEROCITY" />
+			<grant type="Language" id="ID_LANGUAGE_COMMON" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_LANGUAGE" />
+			<grant type="Language" id="ID_LANGUAGE_DWARVISH" requirements="!ID_INTERNAL_GRANTS_DRAGONMARK,!ID_WOTC_TCOE_OPTION_CUSTOMIZED_LANGUAGE" />
+			<select type="Language" name="Customized Language" supports="Custom Race Language" number="2" requirements="ID_WOTC_TCOE_OPTION_CUSTOMIZED_LANGUAGE" />
+		</rules>
+	</element>
+	<element name="Inherent Ferocity" type="Racial Trait" source="Joe's Dark Sun" id="ID_RACIAL_TRAIT_INHERENT_FEROCITY">
+		<description>
+			<p>You gain proficiency in the Intimidation skill.</p>
+		</description>
+		<sheet display="false">
+			<description>You gain proficiency in the Intimidation skill.</description>
+		</sheet>
+		<rules>
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_INTIMIDATION" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_PROFICIENCY" />
+			<select type="Proficiency" name="Customized Skill Proficiency" supports="Skill" requirements="ID_WOTC_TCOE_OPTION_CUSTOMIZED_PROFICIENCY" />
+		</rules>
+	</element>
+	<element name="Relentless Endurance" type="Racial Trait" source="Player’s Handbook" id="ID_RACIAL_TRAIT_RELENTLESS_ENDURANCE">
+		<description>
+			<p>When you are reduced to 0 hit points but not killed outright, you can drop to 1 hit point instead. You can’t use this feature again until you finish a long rest.</p>
+		</description>
+		<sheet usage="1/Long Rest">
+			<description>When you are reduced to 0 hps but not killed outright, you can drop to 1 hp instead.</description>
+		</sheet>
+	</element>
+	<element name="Mul Vitality" type="Racial Trait" source="Joe's Dark Sun" id="ID_RACIAL_TRAIT_MUL_VITALITY">
+		<description>
+			<p>During a short rest, whenever you roll hit dice to recover lost hit points, you may roll twice and take the higher result.</p>
+		</description>
+		<sheet usage="Short Rest">
+			<p>During a short rest, whenever you roll hit dice to recover lost hit points, you may roll twice and take the higher result.</p>
+		</sheet>
+	</element>
+	<element name="Acclimatised to Severity" type="Racial Trait" source="Joe's Dark Sun" id="ID_RACIAL_TRAIT_ACCLIMISED_TO_SEVERITY">
+		<description>
+			<p>You are naturally adapted to surviving in hot climates without apt resources. You require only half the amount of water on a daily basis to stay hydrated.</p>
+		</description>
+		<sheet>
+			<p>You are naturally adapted to surviving in hot climates without apt resources. You require only half the amount of water on a daily basis to stay hydrated.</p>
+		</sheet>
+	</element>
+</elements>

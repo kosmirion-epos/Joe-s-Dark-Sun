@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<index>
+	<info>
+		<name>Your Content</name>
+		<update version="1.0.0">
+			<file name="user-kosmirion-epos.index" url="https://raw.githubusercontent.com/kosmirion-epos/Kosmirion-Epos-Aurora-Content/master/user-kosmirion-epos.index" />
+		</update>
+	</info>
+	<files>
+		<file name="race-mul.xml" url="https://raw.githubusercontent.com/kosmirion-epos/Kosmirion-Epos-Aurora-Content/master/user-kosmirion-epos/race-mul.xml" />
+	</files>
+</index>
