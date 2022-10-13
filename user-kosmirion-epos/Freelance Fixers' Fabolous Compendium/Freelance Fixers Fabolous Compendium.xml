@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Freelance Fixers Fabulous Compendium</name>
+		<update version="0.0.3">
+			<file name="Freelance Fixers Fabulous Compendium.xml" url="https://raw.githubusercontent.com/kosmirion-epos/Kosmirion-Epos-Aurora-Content/master/user-kosmirion-epos/Freelance%20Fixers'%20Fabolous%20Compendium/Freelance-Fixers-Fabolous-Compendium.xml" />
+		</update>
+	</info>
+
+	<!-- Languages -->
+	<element name="Braille" type="Language" source="Freelance Fixers Fabulous Compendium" id="ID_LANGUAGE_BRAILLE">
+		<supports>Standard</supports>
+		<description>
+			<p>A written language, used by blind persons. Consists of patterns of little dots raised from the surface, typically read with ones fingertips.</p>
+		</description>
+		<setters>
+			<set name="standard">true</set>
+			<set name="speakers">All</set>
+			<set name="script">Braille</set>
+		</setters>
+	</element>
+	<element name="Sign Language" type="Language" source="Freelance Fixers Fabulous Compendium" id="ID_LANGUAGE_SIGN">
+		<supports>Standard</supports>
+		<description>
+			<p>A language using hand signs to convey meaning. Mostly used by Hard of Hearing and mute civillians and those who communicate with them.</p>
+		</description>
+		<setters>
+			<set name="standard">true</set>
+			<set name="speakers">All</set>
+			<set name="script">Sign</set>
+		</setters>
+	</element>
+	<element name="Prison Speak" type="Language" source="Freelance Fixers Fabulous Compendium" id="ID_LANGUAGE_PRISON_SPEAK">
+		<supports>Standard</supports>
+		<description>
+			<p>A language devised by criminals and other prison inmates to subtlety convey messages, even in front of the guards. While similarities to Theive's Chant exist, it developed in it's own ecosystem and mostly just uses some borrowed words.</p>
+		</description>
+		<setters>
+			<set name="standard">true</set>
+			<set name="speakers">Some Prisoners</set>
+			<set name="script">Prison Speak</set>
+		</setters>
+	</element>
+	<element name="Shorthand" type="Language" source="Freelance Fixers Fabulous Compendium" id="ID_LANGUAGE_SHORTHAND">
+		<supports>Standard</supports>
+		<description>
+			<p>An abbreviated version of usual writing, almost unintellegible to normal civilians and others who don't know shorthand.</p>
+		</description>
+		<setters>
+			<set name="standard">true</set>
+			<set name="speakers"></set>
+			<set name="script">Shorthand</set>
+		</setters>
+	</element>
+	<element name="Some Coding Language" type="Language" source="Freelance Fixers Fabulous Compendium" id="ID_LANGUAGE_CODING">
+		<supports>Standard</supports>
+		<description>
+			<p>A language to interact with and program computers.</p>
+		</description>
+		<setters>
+			<set name="standard">true</set>
+			<set name="speakers">Programmers</set>
+			<set name="script">1337speak</set>
+		</setters>
+	</element>
+	
+	<!-- Items -->
+	<element name="Concealed Destructive Hand" type="Magic Item" source="Freelance Fixers Fabulous Compendium" id="ID_USER_FFFC_MAGIC_ITEM_CONCEALED_DESTRUCTIVE_HAND">
+		<description>
+			<p>A cybernetic hand which unfolds in a larger surface for a hard kinetic strike.</p>
+			<p class="indent">While attached, this prosthetic provides these benefits:</p>
+			<ul>
+				<li>The prosthetic is a fully capable part of your body.</li>
+				<li>You can take an action to tranform the prosthetic into a weapon.</li>
+				<li>While in weapon form, any Athletics or Acrobatics checks with this Hand adds +2 to the DC of the check.</li>
+				<li>Also while in weapon mode, the wielder adds +1d6 to their unarmed strike damage.</li>
+			</ul>
+		</description>
+		<setters>
+			<set name="category">Cybernetics</set>
+			<set name="cost" currency="gp">450</set>
+			<set name="weight" lb="0">0 lb.</set>
+			<set name="type">Cybernetics</set>
+			<set name="rarity">Uncommon</set>
+			<set name="slot">misc</set>
+		</setters>
+		<rules>
+			<stat name="unarmed:damage" value="1d6" />
+		</rules>
+	</element>
+
+	<element name="Improved Destructive Hand T1" type="Magic Item" source="Freelance Fixers Fabulous Compendium" id="ID_USER_FFFC_MAGIC_ITEM_IMPROVED_DESTRUCTIVE_HAND_T1">
+		<description>
+			<p>Replaces a Concealed Destructive Hand.</p>
+			<p>The Wielder adds 1d8 on top of their normal unarmed strike. However, whether you hit or not you must roll 1d20. On 1-9 you must roll on the wild tech table.</p>
+		</description>
+		<setters>
+			<set name="category">Cybernetics</set>
+			<set name="cost" currency="gp">275</set>
+			<set name="weight" lb="0">0 lb.</set>
+			<set name="type">Cybernetics</set>
+			<set name="rarity">Rare</set>
+			<set name="slot">misc</set>
+		</setters>
+		<rules>
+			<stat name="unarmed:damage" value="1d8" />
+		</rules>
+	</element>
+	<element name="Improved Destructive Hand T2" type="Magic Item" source="Freelance Fixers Fabulous Compendium" id="ID_USER_FFFC_MAGIC_ITEM_IMPROVED_DESTRUCTIVE_HAND_T2">
+		<description>
+			<p>Upgrades an Improved Destructive Hand T1.</p>
+			<p>The Wielder adds 1d10 on top of their normal unarmed strike. However, whether you hit or not you must roll 1d20. On 1-12 you must roll on the wild tech table.</p>
+		</description>
+		<setters>
+			<set name="category">Cybernetics</set>
+			<set name="cost" currency="gp">275</set>
+			<set name="weight" lb="0">0 lb.</set>
+			<set name="type">Cybernetics</set>
+			<set name="rarity">Rare</set>
+			<set name="slot">misc</set>
+		</setters>
+		<rules>
+			<stat name="unarmed:damage" value="1d10" />
+		</rules>
+	</element>
+	<element name="Improved Destructive Hand T3" type="Magic Item" source="Freelance Fixers Fabulous Compendium" id="ID_USER_FFFC_MAGIC_ITEM_IMPROVED_DESTRUCTIVE_HAND_T3">
+		<description>
+			<p>Upgrades an Improved Destructive Hand T2.</p>
+			<p>The Wielder adds 1d12 on top of their normal unarmed strike. However, whether you hit or not you must roll 1d20. On 1-15 you must roll on the wild tech table.</p>
+		</description>
+		<setters>
+			<set name="category">Cybernetics</set>
+			<set name="cost" currency="gp">275</set>
+			<set name="weight" lb="0">0 lb.</set>
+			<set name="type">Cybernetics</set>
+			<set name="rarity">Very Rare</set>
+			<set name="slot">misc</set>
+		</setters>
+		<rules>
+			<stat name="unarmed:damage" value="1d12" />
+		</rules>
+	</element>
+
+	<element name="Underskin Technology: Change of Pace" type="Magic Item" source="Freelance Fixers Fabulous Compendium" id="ID_USER_FFFC_MAGIC_ITEM_UNDERSKIN_TECH_CHANGE_OF_PACE">
+		<description>
+			<p>Electronic forces stimulate and speed up your nervous system. You can take 2 turns at once, but take 1d8 damage that can't be reduced in any way as it strains your body.</p>
+			<p class="indent"><b>Can be used 2 times per long rest.</b></p>
+		</description>
+		<sheet>
+			<description usage="2/Long Rest">
+				You can take another turn immediately after this one, however, if you do so, you take 1d8 damage.
+			</description>
+		</sheet>
+		<setters>
+			<set name="category">Cybernetics</set>
+			<set name="cost" currency="gp">400</set>
+			<set name="weight" lb="0">0 lb.</set>
+			<set name="type">Cybernetics</set>
+			<set name="rarity">Rare</set>
+			<set name="slot">misc</set>
+		</setters>
+	</element>
+	<element name="Underskin Technology: Chromatechnology" type="Magic Item" source="Freelance Fixers Fabulous Compendium" id="ID_USER_FFFC_MAGIC_ITEM_UNDERSKIN_TECH_CHROMATECHNOLOGY">
+		<description>
+			<p>You can create patterns and colors on your skin. However, when a pattern is made it will take until a short rest is taken for it to go away.</p>
+		</description>
+		<sheet>
+			<description>
+				You can create patterns and colors on your skin. They last until the next short rest.
+			</description>
+		</sheet>
+		<setters>
+			<set name="category">Cybernetics</set>
+			<set name="cost" currency="gp">400</set>
+			<set name="weight" lb="0">0 lb.</set>
+			<set name="type">Cybernetics</set>
+			<set name="rarity">Common</set>
+			<set name="slot">misc</set>
+		</setters>
+	</element>
+	<element name="Underskin Technology: Damage Converter" type="Magic Item" source="Freelance Fixers Fabulous Compendium" id="ID_USER_FFFC_MAGIC_ITEM_UNDERSKIN_TECH_DAMAGE_CONVERTER">
+		<description>
+			<p>You can convert one type of damage you are about to take into another kind. However, the next time you deal damage, you deal the same kind of damage.</p>
+		</description>
+		<sheet>
+			<description>
+				When you take damage, you can change one type to another. The next time you deal damage, you deal the same kind.
+			</description>
+		</sheet>
+		<setters>
+			<set name="category">Cybernetics</set>
+			<set name="cost" currency="gp">400</set>
+			<set name="weight" lb="0">0 lb.</set>
+			<set name="type">Cybernetics</set>
+			<set name="rarity">Uncommon</set>
+			<set name="slot">misc</set>
+		</setters>
+	</element>
+	
+	<element name="Skulljack Network" type ="Magic Item" source="Freelance Fixers Fabulous Compendium" id="ID_USER_FFFC_MAGIC_ITEM_SKULLJACK_NETWORK">
+		<description>
+			<p>Installed on the neck or temple of the host. This implant allows the installation of other implants that are typically just large databases.</p>
+		</description>
+		<setters>
+			<set name="category">Cybernetics</set>
+			<set name="cost" currency="gp">400</set>
+			<set name="weight" lb="0">0 lb.</set>
+			<set name="type">Cybernetics</set>
+			<set name="rarity">Uncommon</set>
+			<set name="slot">Head</set>
+		</setters>
+	</element>
+
+	<element name="Stun Baton" type="Weapon" source="Freelance Fixers Fabulous Compendium" id="ID_USER_FFFC_WEAPON_STUN_BATON">
+		<supports>ID_INTERNAL_WEAPON_CATEGORY_SIMPLE_MELEE, ID_INTERNAL_DAMAGE_TYPE_LIGHTNING, ID_INTERNAL_WEAPON_PROPERTY_LIGHT, ID_INTERNAL_WEAPON_GROUP_CLUBS</supports>
+		<description>
+			<p>This baton is ordinary, beside the fact that it has a battery mounted in the hilt and contacts along the striking surface.</p>
+			<p class="indent">When swung, as long as the battery is charged: On a hit, a target must mace a DC 10 Constitution saving throw or be stunned for 1 round.</p>
+		</description>
+		<setters>
+			<set name="category">Weapons</set>
+			<set name="cost" currency="gp">300</set>
+			<set name="weight" lb="2">2 lb.</set>
+			<set name="rarity">Uncommon</set>
+			<set name="slot">onehand</set>
+			<set name="type">Weapon</set>
+			<set name="damage" type="lightning">1d6</set>
+			<set name="proficiency">ID_PROFICIENCY_WEAPON_PROFICIENCY_CLUB</set>
+			<set name="weapon">Baton</set>
+		</setters>
+	</element>
+
+	<!-- Background-->
+	<element name="Optional Feature: Nebolous Military History" type="Background Feature" source="Freelance Fixers Fabulous Compendium" id="ID_USER_FFFC_BACKGROUND_FEATURE_NEBOLOUS_MILITARY_HISTORY">
+		<supports>Background Feature, Optional Background Feature</supports>
+		<description>
+			<p>The vague strings of memories grant you Advantage on skill checks made to spot Druidic.</p>
+		</description>
+		<sheet alt="Nebolous Military History" />
+		<rules>
+			<grant type="Grants" id="ID_INTERNAL_GRANT_OPTIONAL_BACKGROUND_FEATURE" />
+		</rules>
+	</element>
+
+	<!-- Mounts-->
+	<element name="Hoverbike (old)" type="Item" source="Freelance Fixers Fabulous Compendium" id="ID_USER_FFFC_ITEM_HOVERBIKE_OLD">
+		<description>
+			<p>An old hoverbike costs 75 credits. It's old, but it does the job.</p>
+			<!--
+			<strong>
+					<em>Speed.</em>
+				</strong> 40 ft.
+			</p>
+			-->
+		</description>
+		<setters>
+			<set name="category">Mounts &amp; Vehicles</set>
+			<set name="cost" currency="gp">75</set>
+			<set name="weight" lb="0" excludeEncumbrance="true">—</set>
+			<set name="type">Mount</set>
+		</setters>
+	</element>
+	<element name="Hoverbike (new)" type="Item" source="Freelance Fixers Fabulous Compendium" id="ID_USER_FFFC_ITEM_HOVERBIKE_NEW">
+		<description>
+			<p>A new hoverbike costs 100 credits. Not a dent in it... yet. And boy does it go fast.</p>
+			<!--
+			<strong>
+					<em>Speed.</em>
+				</strong> 40 ft.
+			</p>
+			-->
+		</description>
+		<setters>
+			<set name="category">Mounts &amp; Vehicles</set>
+			<set name="cost" currency="gp">100</set>
+			<set name="weight" lb="0" excludeEncumbrance="true">—</set>
+			<set name="type">Mount</set>
+		</setters>
+	</element>
+	
+	<!-- Test -->
+	<element name="Technology" type="Proficiency" id="ID_PROFICIENCY_SKILL_TECHNOLOGY" source="Freelance Fixers Fabulous Compendium">
+		<supports>Skill,Intelligence,ID_PROFICIENCY_SKILL</supports>
+		<description>
+			<p>Your Intelligence (Technology) check measures your ability to interact with and utilize technology, such as AIs or trying to hack into a computer system.</p>
+		</description>
+		<rules>
+			<stat name="technology:proficiency" value="proficiency" bonus="proficiency" />
+		</rules>
+	</element>
+
+</elements>
