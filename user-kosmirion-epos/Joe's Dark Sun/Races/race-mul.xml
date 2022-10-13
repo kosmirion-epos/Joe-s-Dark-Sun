@@ -3,7 +3,7 @@
 	<info>
 		<name>Mul</name>
 		<update version="0.0.1">
-			<file name="race-mul.xml" url="https://raw.githubusercontent.com/kosmirion-epos/Kosmirion-Epos-Aurora-Content/master/user-kosmirion-epos/race-mul.xml" />
+			<file name="race-mul.xml" url="https://raw.githubusercontent.com/kosmirion-epos/Kosmirion-Epos-Aurora-Content/master/user-kosmirion-epos/Joe's%20Dark%20Sun/Races/race-mul.xml" />
 		</update>
 	</info>
 	<element name="Mul" type="Race" source="Joe's Dark Sun" id="ID_RACE_MUL">
